@@ -1,0 +1,45 @@
+html{
+    scroll-behavior: smooth;
+}
+body{
+    margin:0;
+    padding:0;
+    font-family: 'Roboto' ;
+    background: $gray;
+}
+
+a{
+    text-decoration: none;
+    color:black;
+}
+ul{
+    margin:0;
+    padding:0 ;
+    li{
+        list-style: none;
+    }
+}
+.tns-outer{
+    .tns-controls{
+        display:none;
+    }
+    .tns-nav{
+        display:none;
+    }
+}
+.tns-outer [data-action]{
+    display:none;
+}
+figure{
+    margin:0;
+    padding:0;
+}
+img{
+    width: 100%;
+}
+.flexContent{
+    display: flex;
+    -webkit-display: flex;
+    flex-flow: wrap;
+    -webkit-flex-flow: wrap;
+}

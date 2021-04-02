@@ -1,0 +1,54 @@
+.footer{
+    padding:30px 10px;
+    &__content{
+        margin:0 auto ;
+        &--socialMedia{
+            text-align: center;
+            background-color: #e7e6e2;
+            padding: 25px 0;
+            h4{
+                font-size: 30px;
+            }
+        }
+        &--links{
+            width: 80%;
+            margin: 0 auto;
+            @include flex;
+            padding:25px 0 ;
+            .subFooterLinks{
+                width: 25%;
+                ul > li >a{
+                    margin:5px 0;
+                    display: block;
+                    font-size: 14px;
+                    font-weight: 300;
+                }
+                span{
+                    font-size: 14px;
+                    font-weight: 300;
+                    margin:8px 0 ;
+                    display: block;
+                }
+                form{
+                    border:1px solid black;
+                    input{
+                        border:0;
+                        outline:none;
+                    }
+                    input[type="text"]{
+                        padding:8px 8px;
+                        font-size: 12px;
+                        width: 80%;
+                        display: inline-block;
+                    }
+                    input[type="submit"]{
+                        width: 8%;
+                        padding:5px;
+                        cursor: pointer;
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+    }
+}

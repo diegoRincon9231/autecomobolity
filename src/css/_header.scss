@@ -1,0 +1,115 @@
+@keyframes loadedItems{
+    0%{
+        width: 0%;
+        opacity:0;
+        visibility: hidden;
+    }
+    50%{
+        width: 50%;
+        opacity:0.5;
+    }
+    100%{
+        width: 100%;
+        opacity:1;
+        visibility: visible;
+    }
+}
+.header{
+    margin: 0;
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    z-index: 8;
+    background: white;
+    box-shadow:-3px -4px 17px black;
+    &__content{
+        padding:10px;
+        width: 80%;
+        max-width: 90%;
+        margin: 0 auto;
+        &--top{
+            width: 100%;
+            @include flex;
+            &__leftContent{
+                width: 50%;
+                .mainLogo{
+                    h3{
+                        font-size: 35px;
+                        margin: 15px 0;
+                        letter-spacing: 1.5px;
+                        font-weight: 500;
+                    }
+                }
+            }
+            &__rightContent{
+                width: 50%;
+                text-align: right;
+                display: inline-flex;
+                -webkit-display: inline-flex;
+                align-items: flex-end;
+                flex-flow: column;
+                -webkit-flex-flow: column;
+                .searcher{
+                    border:1px solid black;
+                    width: 40%;
+                    input{
+                        border:none;
+                        text-align: left;
+                        outline: none;
+                    }
+                    input[type="text"]{
+                        padding:8px 8px;
+                        font-size: 12px;
+                        width: 80%;
+                        display: inline-block;
+                    }
+                    input[type="submit"]{
+                        width: 8%;
+                        padding:5px;
+                        cursor: pointer;
+                        display: inline-block;
+                    }
+                }
+                .promise{
+                    width: 100%;
+                    margin: 8px 0;
+                    span{
+                        color:#885969;
+                        font-size: 14px;
+                        letter-spacing: 0.5px;
+                    }
+                }
+                
+            }
+        }
+        &--under{
+            width: 100%;
+            &__leftContent{
+                width: 50%;
+                .navPage{
+                    padding:0;
+                    li{
+                        display: inline-block;
+                        &:first-child{
+                            a{
+                                padding-left:0;
+                            }
+                        }
+                        a{
+                            padding:5px 15px;
+                            @include transition;
+                            &:hover{
+                                background:#e0e0e0;
+                            }
+                        }
+                    }
+                }
+            }
+            &__rightContent{
+                width: 50%;
+                text-align: right;
+            }
+        }
+    }
+}

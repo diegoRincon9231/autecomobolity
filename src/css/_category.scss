@@ -1,0 +1,85 @@
+.category{
+    .mainContent{
+        &__content{
+            width: 80%;
+            margin: 20px auto;
+            padding: 50px 0;
+            @include flex;
+            align-items: flex-start !important;
+            &--leftContent{
+                width: 25%;
+                h1{
+                    font-size: 40px;
+                    color:#666666;
+                    letter-spacing: 1.5px;
+                    margin: 10px 0;
+                }
+                .itemsInPage{
+                    font-weight: 300;
+                    font-size: 16px;
+                }
+                .listFilters{
+                    margin: 15px 0;;
+                    &__content{
+                        padding:20px 15px;
+                        border:1px solid gray;
+                        width: 80%;
+                        display: block;
+                        .item{
+                            h3{
+                                color: #3f3f3f;
+                                font-size: 15px;
+                                margin-top: 25px;
+                                display: block;
+                            }
+                            &.talla{
+                                ul {
+                                    li{
+                                        width: 45px;
+                                        height: 45px;
+                                        background:#c8c6cb;
+                                        display: inline-flex;
+                                        text-align: center;
+                                        margin: 5px;
+                                        a{
+                                            text-align: center;
+                                            display: block;
+                                            color:#3f3f3f;
+                                            width: 100%;
+                                            padding-top: 12px;
+                                            @include transition;
+                                            font-weight: 700;
+                                            border:1px solid transparent;
+                                            &:hover{
+                                                background: white;
+                                                color:gray;
+                                                border:1px solid gray;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            ul{
+                                padding-left:0;
+                                li{
+                                    margin:3px 0;
+                                    a{
+                                        font-size: 14px;
+                                        @include transition;
+                                        &:hover{
+                                            text-decoration: underline;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &--products{
+                width: 75%;
+                margin: 20px 0;
+            }
+        }
+    }
+}

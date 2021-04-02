@@ -1,0 +1,11 @@
+.mainContent{
+    margin-top:125px;
+    &__firstBanners, &__secondBanners{
+        width: 70%;
+        margin: 15px auto;
+        .contentLeft, .contentRight{
+            width: 48%;
+            padding:8px;
+        }
+    }
+}

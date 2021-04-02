@@ -1,0 +1,17 @@
+// se importan los otros modulos
+
+$gray:#ececec;
+$darkGray: #7d7d7d;
+$white:#ffffff;
+$black:#000;
+
+
+@import "mixins.scss";
+@import "footer.scss";
+@import "header.scss";
+@import "home.scss";
+@import "base.scss";
+@import "vitrines.scss";
+@import "category.scss";
+@import "product.scss";
+

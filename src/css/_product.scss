@@ -1,0 +1,134 @@
+.product{
+    .mainContent{
+        &__content{
+            width: 80%;
+            margin:20px  auto 10px;
+            padding-top: 40px;
+        }
+        &--contentProduct{
+            @include flex;
+            align-items: flex-start !important;
+            &__leftProduct{
+                width: 60%;
+            }
+            &__rightProduct{
+                width: 40%;
+                &--infoProduct{
+                    #nameProduct{
+                        color:#666;
+                        font-size: 30px;
+                        text-transform: uppercase;
+                        margin:3px 0;
+                    }
+                    #price{
+                        display: block;
+                        color:#885969;
+                        font-weight: 500;
+                        font-size: 25px;
+                    }
+                    #reference{
+                        display: block;
+                        color:#c8c6cb;
+                    }
+                }
+                .skuSelection{
+                    &--item{
+                        h5{
+                            color:gray;
+                            margin:10px 0;
+                            font-weight: 500;
+                            font-size: 17px;
+                            letter-spacing: 1px;
+                        }
+                        &.color{
+                            .select--element-list{
+                                width: 80%;
+                                li{
+                                    width: 60px;
+                                    height: 60px;
+                                    background:#c8c6cb;
+                                    display: inline-flex;
+                                    text-align: center;
+                                    margin: 12px;
+                                    border:1px solid gray;
+                                    cursor:pointer;
+                                    img{
+                                        width: 100%;
+                                    }
+                                }
+                            }
+                        }
+                        &.talla{
+                            margin-bottom: 20px;
+                            .select--element-list{
+                                width: 80%;
+                                li{
+                                    width: 60px;
+                                    height: 60px;
+                                    background:#c8c6cb;
+                                    display: inline-flex;
+                                    text-align: center;
+                                    margin: 12px;
+                                    cursor: pointer;
+                                    a{
+                                        text-align: center;
+                                        display: block;
+                                        color:#3f3f3f;
+                                        width: 100%;
+                                        padding-top: 18px;
+                                        @include transition;
+                                        font-weight: 700;
+                                        border:1px solid transparent;
+                                        &:hover{
+                                            background: white;
+                                            color:gray;
+                                            border:1px solid gray;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .buyButton{
+                    >a {
+                        color:rgb(83, 83, 83);
+                        text-decoration: underline;
+                        font-weight: 500;
+                        font-size: 16px;
+                        margin:8px 0;
+                        display: block;
+                    }
+                    button{
+                        background:#885969;
+                        color: white;
+                        cursor: pointer;
+                        border:none;
+                        padding:15px 0;
+                        width: 50%;
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+        &--detailProduct, &--tecnology{
+            margin:20px 0 ;
+            display: block;
+            h2{
+                color:#666;
+                width: 100%;
+                border-bottom:1px solid #666;
+            }
+            p{
+                color:#666;
+                font-size: 18px;
+                letter-spacing: 0.5px;
+            }
+        }
+        &--vitrine{
+            h2{
+                color:#666;
+            }
+        }
+    }
+}
