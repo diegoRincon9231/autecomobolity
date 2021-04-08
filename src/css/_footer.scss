@@ -8,6 +8,16 @@
             padding: 25px 0;
             h4{
                 font-size: 30px;
+                margin-bottom: 0;
+            }
+            .social{
+                >div{
+                    display: inline-block;
+                    margin: 5px;
+                    span{
+                        color:gray;
+                    }
+                }
             }
         }
         &--links{
@@ -17,6 +27,16 @@
             padding:25px 0 ;
             .subFooterLinks{
                 width: 25%;
+                @include breakpoint(xs){
+                    width: 100%;
+                    border-bottom:1px solid gray;
+                    ul{
+                        display: none;
+                    }
+                    .mobileOpen + ul{
+                        display:block;
+                    }
+                }
                 ul > li >a{
                     margin:5px 0;
                     display: block;

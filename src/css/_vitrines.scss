@@ -1,11 +1,12 @@
 .listProducts{
     @include flex;
     .productItem{
-        width: 31%;
+        background: white;
+        width: 30%;
         padding:5px;
         margin:5px;
         @include breakpoint(xs){
-            width: 49%;
+            width: 43%;
         }
         @include transition;
         cursor: pointer;
@@ -15,6 +16,7 @@
             border-radius:8px;
         }
         &__content{
+            pointer-events: none;
             padding:10px 20px;
             text-align: center;
             border-bottom:1px solid gray;
@@ -25,6 +27,9 @@
                 img{
                     width: auto;
                     height: 130px;
+                    @include breakpoint(xs){
+                        height: 80px;
+                    }
                 }
             }
             &--nameProduct{
@@ -50,8 +55,11 @@
             border:none;
             width: 100%;
             padding:14px 0;
-            cursor:pointer;
+            pointer-events: none;
             display: block;
+            @include breakpoint(xs){
+                font-size: 12px;
+            }
         }
     }
 }

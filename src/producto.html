@@ -2,6 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
     <link rel="icon" type="image/png" href="">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,700,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/tiny-slider.css">
@@ -9,22 +10,44 @@
     <title>Auteco Mob </title>
 </head>
 <body class="product">
+    <div class="blackbox">
+        <div class="spinner">
+        </div>
+    </div>
     <header class="header">
         <div class="header__content">
             <div class="header__content--top flexContent">
                 <div class="header__content--top__leftContent">
+                    <div class="header__content--top__leftContent--mobileMenu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
                     <figure class="mainLogo">
                         <img src="" alt="">
                         <h3>MI ZAPATO</h3>
                     </figure>
+                    <div class="header__content--top__leftContent--otherLinksMobile">
+                        <div class="searcher">
+                            <a href="javscript:void(0)">
+                                <span class="icon-search"></span>
+                            </a>
+                        </div>
+                        <div class="cart">
+                            <a href="javascript:void(0)">
+                                <span class="icon-cart"></span>
+                            </a>
+                        </div>
+                    </div>
                 </div>
                 <div class="header__content--top__rightContent">
                     <div class="searcher">
                         <input type="text" placeholder="BUSCAR">
                         <input type="submit" value=">">
+                        <span class="icon-search"></span>
                     </div>
                     <div class="promise">
-                        <span>ENVÍO GRATIS PARA PEDIDOS SUPERIORES A $300.000</span>
+                        <span class="icon-ic_faces_ic_shipping"></span><span>ENVÍO GRATIS PARA PEDIDOS SUPERIORES A $300.000</span>
                     </div>
                 </div>
             </div>
@@ -33,35 +56,76 @@
                     <div class="header__content--under__leftContent">
                         <ul class="navPage">
                             <li>
-                                <a href="/category">HOMBRE</a>
+                                <a href="/category.html">HOMBRE</a>
                             </li>
                             <li>
-                                <a href="/category">MUJER</a>
+                                <a href="/category.html">MUJER</a>
                             </li>
                             <li>
-                                <a href="/category">BLOG</a>
+                                <a href="/category.html">BLOG</a>
                             </li>
                             <li>
-                                <a href="/category">HISTORIA</a>
+                                <a href="/category.html">HISTORIA</a>
                             </li>
                             <li>
-                                <a href="/category">TIENDAS</a>
+                                <a href="/category.html">TIENDAS</a>
                             </li>
                         </ul>
                     </div>
                     <div class="header__content--under__rightContent">
                         <div class="cartContent">
                             <div class="items">
-                                <span class="icon-"></span>
+                                <span class="icon-cart"></span>
                                 <span>CARRITO</span>
                                 <span id="qtyItems">0</span>
                             </div>
                             <div class="cartContent--cart">
-
+                                <h4>RESUMEN DE COMPRA</h4>
+                                <div class="countBar">
+                                    <div class="bar">
+                                    </div>
+                                    <span>Te faltan <span id="quantityToFree"></span>para que tu envío sea gratis</span>
+                                </div>
+                                <div class="productInCart">
+                                    <p>Actualmente No tienes productos</p>
+                                </div>
+                                <div class="totalizers">
+                                    <div class="totalizers__subTotal">
+                                        <span>SUBTOTAL:</span>
+                                        <span>0</span>
+                                    </div>
+                                    <div class="totalizers__total">
+                                        <span>TOTAL:</span>
+                                        <span>0</span>
+                                    </div>
+                                    <div class="buyButton">
+                                        <span class="icon-cart"></span>
+                                        <a href="javascript:void(0)">FINALIZAR COMPRA</a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="header__navMobile">
+                <ul class="navPageMobile">
+                    <li>
+                        <a href="/category.html">HOMBRE</a>
+                    </li>
+                    <li>
+                        <a href="/category.html">MUJER</a>
+                    </li>
+                    <li>
+                        <a href="/category.html">BLOG</a>
+                    </li>
+                    <li>
+                        <a href="/category.html">HISTORIA</a>
+                    </li>
+                    <li>
+                        <a href="/category.html">TIENDAS</a>
+                    </li>
+                </ul>
             </div>
         </div>
     </header>
@@ -161,8 +225,21 @@
             <div class="footer__content--socialMedia">
                 <h4>@mizapato</h4>
                 <div class="social">
-                    <div></div>
-                    <div></div>
+                    <div>
+                        <a href="">
+                            <span class="icon-facebook2"></span>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="">
+                            <span class="icon-whatsapp"></span>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="">
+                            <span class="icon-youtube2"></span>
+                        </a>
+                    </div>
                 </div>
             </div>
             <div class="footer__content--links">

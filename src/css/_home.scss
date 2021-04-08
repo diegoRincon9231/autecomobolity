@@ -3,9 +3,15 @@
     &__firstBanners, &__secondBanners{
         width: 70%;
         margin: 15px auto;
+        @include breakpoint(xs){
+            width: 85%;
+        }
         .contentLeft, .contentRight{
             width: 48%;
             padding:8px;
+            @include breakpoint(xs){
+                width: 100%;
+            }
         }
     }
 }

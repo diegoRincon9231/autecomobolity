@@ -1,15 +1,15 @@
 import Data from './data';   
 
 const printProduct = (data) =>{
-    let itemToPrint = data[0].foto;
+    let itemToPrint = data.foto;
     let htmlBigImage = '';
         htmlBigImage += '<figure>';
         htmlBigImage +=    `<img src="./src/images/${itemToPrint}"/>`; 
         htmlBigImage += '</figure>'; 
     document.querySelector('.bigImageProduct').insertAdjacentHTML('beforeend', htmlBigImage)
-    document.getElementById('nameProduct').insertAdjacentHTML('beforeend', data[0].nombre)
-    document.getElementById('price').insertAdjacentHTML('beforeend', '$' +data[0].precio)
-    document.getElementById('reference').insertAdjacentHTML('beforeend', data[0].referencia)
+    document.getElementById('nameProduct').insertAdjacentHTML('beforeend', data.nombre)
+    document.getElementById('price').insertAdjacentHTML('beforeend', '$' +data.precio)
+    document.getElementById('reference').insertAdjacentHTML('beforeend', 'Referencia:' + data.referencia)
     document.getElementById('selectorColor').insertAdjacentHTML('beforeend',`<li> <img src="./src/images/${itemToPrint}"/></li>`)
 }
 const printVitrine = (data) => {
@@ -36,11 +36,20 @@ const initSlider = () => {
         slideBy: 'page',
         autoplay: true,
         dots:false,
-        navAsThumbnails:false
+        navAsThumbnails:false,
+        responsive: {
+            300: {
+                items: 2
+            },
+            900: {
+                items: 4
+            }
+          }
     });
 }
 const Product = () => {
-    printProduct(Data)
+    let itemId = localStorage.getItem('vtexProductId') != 'undefined' ?localStorage.getItem('vtexProductId') : 0; 
+    printProduct(Data[itemId])
     printVitrine(Data);
 }
 export default Product;

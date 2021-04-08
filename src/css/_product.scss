@@ -4,15 +4,26 @@
             width: 80%;
             margin:20px  auto 10px;
             padding-top: 40px;
+            @include breakpoint(xs){
+                padding-top: 10px
+            }
         }
         &--contentProduct{
             @include flex;
             align-items: flex-start !important;
             &__leftProduct{
-                width: 60%;
+                width: 58%;
+                padding: 15px;
+                @include breakpoint(xs){
+                    width: 100%;
+                }
             }
             &__rightProduct{
-                width: 40%;
+                width: 35%;
+                padding:15px ;
+                @include breakpoint(xs){
+                    width: 100%;
+                }
                 &--infoProduct{
                     #nameProduct{
                         color:#666;
@@ -24,25 +35,32 @@
                         display: block;
                         color:#885969;
                         font-weight: 500;
-                        font-size: 25px;
+                        font-size: 23px;
+                        letter-spacing: 1.5px;
                     }
                     #reference{
                         display: block;
                         color:#c8c6cb;
+                        font-size: 14px;
+                        font-weight: 300;
                     }
                 }
                 .skuSelection{
+                    margin:25px 0 ;
                     &--item{
                         h5{
                             color:gray;
                             margin:10px 0;
                             font-weight: 500;
-                            font-size: 17px;
+                            font-size: 14px;
                             letter-spacing: 1px;
                         }
                         &.color{
                             .select--element-list{
                                 width: 80%;
+                                @include breakpoint(xs){
+                                    width: 100%;
+                                }
                                 li{
                                     width: 60px;
                                     height: 60px;
@@ -61,15 +79,23 @@
                         &.talla{
                             margin-bottom: 20px;
                             .select--element-list{
-                                width: 80%;
+                                width: 95%;
+                                @include breakpoint(xs){
+                                    width: 100%;
+                                }
                                 li{
-                                    width: 60px;
-                                    height: 60px;
+                                    width: 55px;
+                                    height: 55px;
                                     background:#c8c6cb;
                                     display: inline-flex;
                                     text-align: center;
-                                    margin: 12px;
+                                    margin: 5px;
                                     cursor: pointer;
+                                    @include breakpoint(xs){
+                                        width: 45px;
+                                        height: 45px;
+                                        margin:2px;
+                                    }
                                     a{
                                         text-align: center;
                                         display: block;
@@ -79,6 +105,10 @@
                                         @include transition;
                                         font-weight: 700;
                                         border:1px solid transparent;
+                                        @include breakpoint(xs){
+                                            font-size: 14px;
+                                            padding-top: 14px;
+                                        }
                                         &:hover{
                                             background: white;
                                             color:gray;
@@ -107,6 +137,9 @@
                         padding:15px 0;
                         width: 50%;
                         display: inline-block;
+                        @include breakpoint(xs){
+                            width: 95%;
+                        }
                     }
                 }
             }
@@ -118,16 +151,26 @@
                 color:#666;
                 width: 100%;
                 border-bottom:1px solid #666;
+                font-size: 18px;
+                font-weight: 700;
+                letter-spacing: 1px;
+                @include breakpoint(xs){
+                    font-size: 16px;
+                }
             }
             p{
                 color:#666;
-                font-size: 18px;
+                font-size: 16px;
                 letter-spacing: 0.5px;
             }
         }
         &--vitrine{
             h2{
                 color:#666;
+                width: 100%;
+                font-size: 18px;
+                font-weight: 700;
+                letter-spacing: 1px;
             }
         }
     }
